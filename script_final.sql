@@ -44,12 +44,12 @@ CREATE TABLE tipo_servicios (
 
 CREATE TABLE atencion_por_rango_edad (
     id INTEGER PRIMARY KEY NOT NULL,
-    rango_edad_inferior INTEGER,
-    rango_edad_superior INTEGER CHECK (rango_edad_inferior < rango_edad_superior),
+    lim_inf_rango INTEGER,
+    lim_sup_rango INTEGER CHECK (lim_inf_rango < lim_sup_rango),
     id_codigo_cie TEXT NOT NULL,
     hombres INTEGER DEFAULT 0,
     mujeres INTEGER DEFAULT 0,
-    no_identificado INTEGER DEFAULT 0,
+    ignorado INTEGER DEFAULT 0,
     id_tipo_servicio INTEGER NOT NULL,
     FOREIGN KEY (id_codigo_cie) REFERENCES enfermedades(codigo_cie),
     FOREIGN KEY (id_tipo_servicio) REFERENCES tipo_servicios(id_tipo_servicios)
