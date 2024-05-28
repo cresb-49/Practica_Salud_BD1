@@ -13,8 +13,8 @@ def limpiar_texto(texto):
     return texto
 
 # Nombre del archivo CSV de entrada y salida
-archivo_entrada = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion/datos_vacunacion.csv"
-archivo_salida = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion/datos_vacunacion_v1.csv"
+archivo_entrada = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion_vacunacion/datos_vacunacion.csv"
+archivo_salida = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion_vacunacion/datos_vacunacion_v1.csv"
 
 # Leer el archivo CSV
 df = pd.read_csv(archivo_entrada)

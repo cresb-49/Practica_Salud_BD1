@@ -1,8 +1,8 @@
 import pandas as pd
 
 # Ruta donde se guardarán los archivos
-ruta_entrada = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion/"
-ruta_salida = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion/"
+ruta_entrada = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion_vacunacion/"
+ruta_salida = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion_vacunacion/"
 
 # Leer el archivo original de vacunación que puede tener valores vacíos
 df = pd.read_csv(ruta_entrada + 'datos_vacunacion_v3.csv')

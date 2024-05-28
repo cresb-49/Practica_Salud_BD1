@@ -2,8 +2,8 @@ import pandas as pd
 
 
 # Ruta donde se guardarán los archivos
-ruta_entrada = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion/"
-ruta_salida = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion/"
+ruta_entrada = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion_vacunacion/"
+ruta_salida = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion_vacunacion/"
 
 # Leer el archivo CSV modificado
 df = pd.read_csv(ruta_entrada+'datos_vacunacion_v1.csv')

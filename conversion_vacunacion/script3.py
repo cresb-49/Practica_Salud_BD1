@@ -12,8 +12,8 @@ def limpiar_texto(texto):
     return texto
 
 # Ruta donde se guardarán los archivos
-ruta_entrada = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion/"
-ruta_salida = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion/"
+ruta_entrada = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion_vacunacion/"
+ruta_salida = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion_vacunacion/"
 
 def cargar_en_diccionario(nombre_archivo, limpiar=False):
     df_temp = pd.read_csv(ruta_entrada + nombre_archivo)

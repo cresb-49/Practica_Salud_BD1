@@ -1,8 +1,8 @@
 import pandas as pd
 
 # Ruta donde se guardará el archivo
-ruta_entrada = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion/"
-ruta_salida = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion/"
+ruta_entrada = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion_vacunacion/"
+ruta_salida = "/home/benjamin/PROYECTOS/Practica_Salud_BD1/conversion_vacunacion/"
 
 # Leer el archivo de vacunación que ya tiene las columnas de ID
 df = pd.read_csv(ruta_entrada + 'datos_vacunacion_v2.csv')
