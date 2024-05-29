@@ -3,7 +3,7 @@ USE salud_guatemala;
 
 -- DROP TABLE IF EXISTS genero;
 CREATE TABLE IF NOT EXISTS genero(
-    id_genero INT PRIMARY KEY NOT NULL,
+    id_genero INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     genero VARCHAR(20) NOT NULL UNIQUE
 );
 
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS municipio(
 
 -- DROP TABLE IF EXISTS tipo_consulta;
 CREATE TABLE IF NOT EXISTS tipo_consulta(
-    id_tipo_consulta INT PRIMARY KEY NOT NULL,
+    id_tipo_consulta INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     tipo_consulta VARCHAR(100) NOT NULL UNIQUE
 );
 
@@ -37,32 +37,32 @@ CREATE TABLE IF NOT EXISTS enfermedades(
 
 -- DROP TABLE IF EXISTS condicion_egreso;
 CREATE TABLE IF NOT EXISTS condicion_egreso(
-    id_condicion_egreso INT PRIMARY KEY NOT NULL,
+    id_condicion_egreso INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     condicion_egreso VARCHAR(100) NOT NULL UNIQUE
 );
 
 -- DROP TABLE IF EXISTS tratamiento;
 CREATE TABLE IF NOT EXISTS tratamiento(
-    id_tratamiento INT PRIMARY KEY NOT NULL,
+    id_tratamiento INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     tratamiento VARCHAR(100) NOT NULL UNIQUE
 );
 
 -- DROP TABLE IF EXISTS tipo_servicio;
 CREATE TABLE IF NOT EXISTS tipo_servicio(
-    id_tipo_servicio INT PRIMARY KEY NOT NULL,
+    id_tipo_servicio INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     tipo_servicio VARCHAR(100) NOT NULL UNIQUE
 );
 
 -- DROP TABLE IF EXISTS rangos_edad;
 CREATE TABLE IF NOT EXISTS rangos_edad(
-    id_rango_edad INT PRIMARY KEY NOT NULL,
+    id_rango_edad INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     lim_inf_rango INT,
     lim_sup_rango INT CHECK (lim_inf_rango < lim_sup_rango)
 );
 
 -- DROP TABLE IF EXISTS atencion_por_rango_edad;
 CREATE TABLE IF NOT EXISTS atención_por_rango_edad(
-    id INT PRIMARY KEY NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     id_rango_edad INT NOT NULL,
     id_codigo_cie VARCHAR(10) NOT NULL,
     id_tipo_servicio INT NOT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS atención_por_rango_edad(
 
 -- DROP TABLE IF EXISTS valor_atencion_por_rango_edad;
 CREATE TABLE IF NOT EXISTS valor_atencion_por_rango_edad(
-    id INT PRIMARY KEY NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     id_atencion_por_rango_edad INT NOT NULL,
     id_genero INT NOT NULL,
     valor INT NOT NULL,
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS valor_atencion_por_rango_edad(
 
 -- DROP TABLE IF EXISTS atencion_por_departamento;
 CREATE TABLE IF NOT EXISTS atencion_por_departamento(
-    id_atencion_por_departamento INT PRIMARY KEY NOT NULL,
+    id_atencion_por_departamento INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     id_departamento VARCHAR(2) NOT NULL,
     codigo_cie VARCHAR(10) NOT NULL,
     id_tipo_servicio INT NOT NULL,
@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS atencion_por_departamento(
 
 -- DROP TABLE IF EXISTS valor_atencion_por_departamento;
 CREATE TABLE IF NOT EXISTS valor_atencion_por_departamento(
-    id INT PRIMARY KEY NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     id_atencion_por_departamento INT NOT NULL,
     id_genero INT NOT NULL,
     valor INT NOT NULL,
@@ -103,7 +103,7 @@ CREATE TABLE IF NOT EXISTS valor_atencion_por_departamento(
 
 -- DROP TABLE IF EXISTS atencion_por_municipio;
 CREATE TABLE IF NOT EXISTS atencion_por_tipo_consulta(
-    id_atencion_por_tipo_consulta INT PRIMARY KEY NOT NULL,
+    id_atencion_por_tipo_consulta INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     id_rango_edad INT NOT NULL,
     id_genero INT NOT NULL,
     id_tipo_consulta INT NOT NULL,
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS atencion_por_tipo_consulta(
 );
 
 CREATE TABLE IF NOT EXISTS condicion_egreso_segun_sexo(
-    id_condicion_egreso_segun_sexo INT PRIMARY KEY NOT NULL,
+    id_condicion_egreso_segun_sexo INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     id_genero INT NOT NULL,
     id_condicion_egreso INT NOT NULL,
     total INT NOT NULL,
@@ -123,7 +123,7 @@ CREATE TABLE IF NOT EXISTS condicion_egreso_segun_sexo(
 );
 
 CREATE TABLE IF NOT EXISTS tratamiento_servicios_internos(
-    id_tratamiento_servicios_internos INT PRIMARY KEY NOT NULL,
+    id_tratamiento_servicios_internos INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     id_genero INT NOT NULL,
     id_tratamiento INT NOT NULL,
     total INT NOT NULL,
@@ -132,7 +132,7 @@ CREATE TABLE IF NOT EXISTS tratamiento_servicios_internos(
 );
 
 CREATE TABLE IF NOT EXISTS promedio_estancia_egresados(
-    id_promedio_estancia_egresados INT PRIMARY KEY NOT NULL,
+    id_promedio_estancia_egresados INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     id_departamento VARCHAR(2) NOT NULL,
     total_egresados INT NOT NULL,
     promedio_estancia INT NOT NULL,
@@ -140,23 +140,23 @@ CREATE TABLE IF NOT EXISTS promedio_estancia_egresados(
 );
 
 CREATE TABLE IF NOT EXISTS numero_dosis(
-    id_numero_dosis INT PRIMARY KEY NOT NULL,
+    id_numero_dosis INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     numero_dosis VARCHAR(5) NOT NULL UNIQUE,
     descripcion VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS vacuna(
-    id_vacuna INT PRIMARY KEY NOT NULL,
+    id_vacuna INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     vacuna VARCHAR(255) NOT NULL UNIQUE
 );
 
 CREATE TABLE IF NOT EXISTS area_salud(
-    id_area_salud INT PRIMARY KEY NOT NULL,
+    id_area_salud INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     area_salud VARCHAR(255) NOT NULL UNIQUE
 );
 
 CREATE TABLE IF NOT EXISTS atencion_por_vacuna(
-    id_atencion_por_vacuna INT PRIMARY KEY NOT NULL,
+    id_atencion_por_vacuna INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     anio INT NOT NULL,
     id_area_salud INT NOT NULL,
     id_departamento VARCHAR(2) NOT NULL,
@@ -174,7 +174,7 @@ CREATE TABLE IF NOT EXISTS atencion_por_vacuna(
 );
 
 CREATE TABLE IF NOT EXISTS atencion_por_vacuna_vph(
-    id_atencion_por_vacuna_vph INT PRIMARY KEY NOT NULL,
+    id_atencion_por_vacuna_vph INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     anio INT NOT NULL,
     id_area_salud INT NOT NULL,
     id_departamento VARCHAR(2) NOT NULL,
