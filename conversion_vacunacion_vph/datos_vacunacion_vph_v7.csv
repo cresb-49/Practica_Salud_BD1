@@ -1,4 +1,4 @@
-anio,id_area_salud,id_departamento,id_municipio,id_num_dosis,id_genero,n_vacunados,poblacion
+anio,id_area_salud,id_departamento,id_municipio,id_numero_dosis,id_genero,n_vacunados,poblacion
 2006,1,16,1612,1,2,207,833
 2006,1,16,1612,2,2,129,833
 2007,1,16,1612,1,2,729,847
