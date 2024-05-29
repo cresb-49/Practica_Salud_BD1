@@ -1,4 +1,4 @@
-CREATE DTABASE IF NOT EXISTS salud_guatemala;
+CREATE DATABASE IF NOT EXISTS salud_guatemala;
 USE salud_guatemala;
 
 -- DROP TABLE IF EXISTS genero;
