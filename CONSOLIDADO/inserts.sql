@@ -14794,3 +14794,15 @@ INSERT INTO numero_dosis VALUES(2,'2a.','Segunda Dosis');
 INSERT INTO numero_dosis VALUES(3,'3a.','Tercera Dosis');
 INSERT INTO numero_dosis VALUES(4,'R1','Refuerzo 1');
 INSERT INTO numero_dosis VALUES(5,'R2','Refuerzo 2');
+
+-- Inserta data de las vacunas
+INSERT INTO vacuna VALUES (1,'BCG');
+INSERT INTO vacuna VALUES (2,'Hepatitis B');
+INSERT INTO vacuna VALUES (3,'Polio');
+INSERT INTO vacuna VALUES (4,'Neumococo');
+INSERT INTO vacuna VALUES (5,'Pentavalente');
+INSERT INTO vacuna VALUES (6,'Rotavirus');
+INSERT INTO vacuna VALUES (7,'DPT');
+INSERT INTO vacuna VALUES (8,'SPR');
+INSERT INTO vacuna VALUES (9,'Influenza estacional');
+INSERT INTO vacuna VALUES (10,'Td');

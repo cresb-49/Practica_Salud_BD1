@@ -141,7 +141,8 @@ CREATE TABLE IF NOT EXISTS promedio_estancia_egresados(
 
 CREATE TABLE IF NOT EXISTS numero_dosis(
     id_numero_dosis INT PRIMARY KEY NOT NULL,
-    numero_dosis VARCHAR(5) NOT NULL UNIQUE
+    numero_dosis VARCHAR(5) NOT NULL UNIQUE,
+    descripcion VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS vacuna(
