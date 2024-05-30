@@ -1,0 +1,20 @@
+Extraccion de datos de vacunacion cobertura y tipos de vacunas
+- Año: Varios
+- Periodo: Anuales
+https://tableros.mspas.gob.gt/vacunacionesquemaregular/
+
+Extraccion de estadisticas Hospitalarias:
+- Año: 2023
+- Periodo: Trimestral
+- Servicios: Internos y Externos
+https://www.ine.gob.gt/estadisticas-hospitalarias/
+
+Extraccion de estadisticas Morbilidad Gurpo Materno Infantil:
+- Años: 2012 al 2022
+- Periodo: Anuales
+https://sigsa.mspas.gob.gt/datos-de-salud/morbilidad/morbilidad-grupo-materno-infantil
+
+Extraccion de estadisticas Enfermedades Cronicas:
+- Años: 2012 al 2022
+- Periodo: Anuales
+https://sigsa.mspas.gob.gt/datos-de-salud/morbilidad/enfermedades-cronicas
