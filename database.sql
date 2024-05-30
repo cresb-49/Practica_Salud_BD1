@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS rangos_edad(
 );
 
 -- DROP TABLE IF EXISTS atencion_por_rango_edad;
-CREATE TABLE IF NOT EXISTS atención_por_rango_edad(
+CREATE TABLE IF NOT EXISTS atencion_por_rango_edad(
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     id_rango_edad INT NOT NULL,
     id_codigo_cie VARCHAR(10) NOT NULL,
