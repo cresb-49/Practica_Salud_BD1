@@ -12,7 +12,7 @@ inserts = []
 
 # Iteramos por cada fila del DataFrame y creamos los inserts
 for index, row in df.iterrows():
-    id_atencion_por_rango_edad = row['id_atencion_por_rango_edad']
+    id_atencion_por_rango_edad = row['id']
     id_genero = row['id_genero']
     valor = row['valor']
     insert = f"INSERT INTO valor_atencion_por_rango_edad (id_atencion_por_rango_edad, id_genero, valor) VALUES ({id_atencion_por_rango_edad}, {id_genero}, {valor});"

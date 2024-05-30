@@ -17,9 +17,7 @@ new_id = 1
 # Iteramos por cada fila del DataFrame original y creamos nuevas filas para cada género
 for index, row in df.iterrows():
     genero_data.append([new_id, 1, row['hombres']])
-    new_id += 1
     genero_data.append([new_id, 2, row['mujeres']])
-    new_id += 1
     genero_data.append([new_id, 3, row['ignorado']])
     new_id += 1
 
