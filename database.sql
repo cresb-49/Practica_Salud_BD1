@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS valor_atencion_por_rango_edad(
     id_genero INT NOT NULL,
     valor INT NOT NULL,
     FOREIGN KEY (id_genero) REFERENCES genero(id_genero),
-    FOREIGN KEY (id_atencion_por_rango_edad) REFERENCES atención_por_rango_edad(id)
+    FOREIGN KEY (id_atencion_por_rango_edad) REFERENCES atencion_por_rango_edad(id)
 );
 
 -- DROP TABLE IF EXISTS atencion_por_departamento;
