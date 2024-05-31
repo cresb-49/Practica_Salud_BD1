@@ -1,8 +1,8 @@
 CREATE DATABASE IF NOT EXISTS salud_guatemala;
+
 USE salud_guatemala;
 
 -- PODEMOS DESCOMENTAR LOS DROPS PARA BORRAR LAS TABLAS SI SE NECESITA EJECTUAR EL SCRIPT VARIAS VECES
-
 -- DROP TABLE IF EXISTS genero;
 CREATE TABLE IF NOT EXISTS genero(
     id_genero INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -115,6 +115,7 @@ CREATE TABLE IF NOT EXISTS atencion_por_tipo_consulta(
     FOREIGN KEY (id_tipo_consulta) REFERENCES tipo_consulta(id_tipo_consulta)
 );
 
+-- DROP TABLE IF NOT EXISTS condicion_egreso_segun_sexo;
 CREATE TABLE IF NOT EXISTS condicion_egreso_segun_sexo(
     id_condicion_egreso_segun_sexo INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     id_genero INT NOT NULL,
@@ -124,6 +125,7 @@ CREATE TABLE IF NOT EXISTS condicion_egreso_segun_sexo(
     FOREIGN KEY (id_condicion_egreso) REFERENCES condicion_egreso(id_condicion_egreso)
 );
 
+-- DROP TABLE IF EXISTS tratamiento_servicios_internos;
 CREATE TABLE IF NOT EXISTS tratamiento_servicios_internos(
     id_tratamiento_servicios_internos INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     id_genero INT NOT NULL,
@@ -133,6 +135,7 @@ CREATE TABLE IF NOT EXISTS tratamiento_servicios_internos(
     FOREIGN KEY (id_tratamiento) REFERENCES tratamiento(id_tratamiento)
 );
 
+-- DROP TABLE IF EXISTS promedio_estancia_egresados;
 CREATE TABLE IF NOT EXISTS promedio_estancia_egresados(
     id_promedio_estancia_egresados INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     id_departamento VARCHAR(2) NOT NULL,
@@ -141,22 +144,26 @@ CREATE TABLE IF NOT EXISTS promedio_estancia_egresados(
     FOREIGN KEY (id_departamento) REFERENCES departamento(id_departamento)
 );
 
+-- DROP TABLE IF EXISTS numero_dosis;
 CREATE TABLE IF NOT EXISTS numero_dosis(
     id_numero_dosis INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     numero_dosis VARCHAR(5) NOT NULL UNIQUE,
     descripcion VARCHAR(255) NOT NULL
 );
 
+-- DROP TABLE IF EXISTS vacuna;
 CREATE TABLE IF NOT EXISTS vacuna(
     id_vacuna INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     vacuna VARCHAR(255) NOT NULL UNIQUE
 );
 
+-- DROP TABLE IF EXISTS area_salud;
 CREATE TABLE IF NOT EXISTS area_salud(
     id_area_salud INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     area_salud VARCHAR(255) NOT NULL UNIQUE
 );
 
+-- DROP TABLE IF EXISTS atencion_por_vacuna;
 CREATE TABLE IF NOT EXISTS atencion_por_vacuna(
     id_atencion_por_vacuna INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     anio INT NOT NULL,
@@ -175,6 +182,7 @@ CREATE TABLE IF NOT EXISTS atencion_por_vacuna(
     FOREIGN KEY (id_numero_dosis) REFERENCES numero_dosis(id_numero_dosis)
 );
 
+-- DROP TABLE IF EXISTS atencion_por_vacuna_vph;
 CREATE TABLE IF NOT EXISTS atencion_por_vacuna_vph(
     id_atencion_por_vacuna_vph INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     anio INT NOT NULL,
@@ -192,6 +200,7 @@ CREATE TABLE IF NOT EXISTS atencion_por_vacuna_vph(
     FOREIGN KEY (id_genero) REFERENCES genero(id_genero)
 );
 
+-- DROP TABLE IF EXISTS enfermedades_cronicas;
 CREATE TABLE IF NOT EXISTS enfermedades_cronicas(
     id_enfermedades_cronicas INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     anio INT NOT NULL,
@@ -203,6 +212,7 @@ CREATE TABLE IF NOT EXISTS enfermedades_cronicas(
     FOREIGN KEY (codigo_cie) REFERENCES enfermedades(codigo_cie)
 );
 
+-- DROP TABLE IF EXISTS valor_enfermedades_cronicas;
 CREATE TABLE IF NOT EXISTS valor_enfermedades_cronicas(
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     id_enfermedades_cronicas INT NOT NULL,
