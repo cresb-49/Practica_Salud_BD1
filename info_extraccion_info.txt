@@ -1,17 +1,24 @@
 Extraccion de datos de vacunacion cobertura y tipos de vacunas
 - Año: Varios
 - Periodo: Anuales
+- Datos:
+- Tipos de vacunas, poblacion vacunada y los sexos, numero de dosis, ubicaciones del pais donde se aplico la vacuna
+- Aplica tambien a las vacunas del VPH
 https://tableros.mspas.gob.gt/vacunacionesquemaregular/
 
 Extraccion de estadisticas Hospitalarias:
 - Año: 2023
 - Periodo: Trimestral
 - Servicios: Internos y Externos
+- Datos:
+- Atencion de pacientes, causas (enfermedades), estadisticas de ingreso, egreso y el estado del mismo, atenciones por departamento, rangos de edad , consultas y tratamientos
 https://www.ine.gob.gt/estadisticas-hospitalarias/
 
 Extraccion de estadisticas Enfermedades Cronicas:
 - Años: 2012 al 2022
 - Periodo: Anuales
+- Datos:
+- Tipo de enfermedad, ubicacion (departamento, municipio), generos, rangos de edad y cantidad de la poblacion afectada
 https://sigsa.mspas.gob.gt/datos-de-salud/morbilidad/enfermedades-cronicas
 
 De la información recopilada, un 95% de los datos fueron formateados y generados en inserts para el ingreso a la base de datos mediante scripts de Python. 
