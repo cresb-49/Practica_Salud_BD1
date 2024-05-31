@@ -14,7 +14,13 @@ Extraccion de estadisticas Enfermedades Cronicas:
 - Periodo: Anuales
 https://sigsa.mspas.gob.gt/datos-de-salud/morbilidad/enfermedades-cronicas
 
-De la informacion recopilada en un 95% todos los datos fueron formateados y generados en inserts
-para el ingreso a la base de datos, con scripts de python, asi tambien aprovechados y redefinidos
-informacion que se proporciono en clase link de git donde se ve procedimiento de la informacion
+De la información recopilada, un 95% de los datos fueron formateados y generados en inserts para el ingreso a la base de datos mediante scripts de Python. 
+Además, se aprovechó y se redefinió la información proporcionada en clase en este caso de salud.
+En el enlace de Git se puede ver el procedimiento de la información.
 https://github.com/cresb-49/Practica_Salud_BD1.git
+
+La carga de datos se compone de dos archivos diferentes debido a la cantidad de registros.
+Orden de ejecucion:
+#3_creacion_db.sql
+#3_carga_datos1.sql
+#3_carga_datos2.sql
