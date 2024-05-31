@@ -9,12 +9,12 @@ Extraccion de estadisticas Hospitalarias:
 - Servicios: Internos y Externos
 https://www.ine.gob.gt/estadisticas-hospitalarias/
 
-Extraccion de estadisticas Morbilidad Gurpo Materno Infantil:
-- Años: 2012 al 2022
-- Periodo: Anuales
-https://sigsa.mspas.gob.gt/datos-de-salud/morbilidad/morbilidad-grupo-materno-infantil
-
 Extraccion de estadisticas Enfermedades Cronicas:
 - Años: 2012 al 2022
 - Periodo: Anuales
 https://sigsa.mspas.gob.gt/datos-de-salud/morbilidad/enfermedades-cronicas
+
+De la informacion recopilada en un 95% todos los datos fueron formateados y generados en inserts
+para el ingreso a la base de datos, con scripts de python, asi tambien aprovechados y redefinidos
+informacion que se proporciono en clase link de git donde se ve procedimiento de la informacion
+https://github.com/cresb-49/Practica_Salud_BD1.git
