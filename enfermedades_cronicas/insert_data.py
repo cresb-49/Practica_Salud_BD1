@@ -27,7 +27,7 @@ for index, row in df.iterrows():
     id_departamento = row['id_departamento']
     id_municipio = row['id_municipio']
     codigo_cie = row['CIE']
-    insert = f"INSERT INTO enfermedades_cronicas (id_enfermedades_cronicas, anio, id_departamento, id_municipio, codigo_cie) VALUES ({id_row}, '{id_departamento}', '{id_municipio}', '{codigo_cie}');"
+    insert = f"INSERT INTO enfermedades_cronicas (id_enfermedades_cronicas, anio, id_departamento, id_municipio, codigo_cie) VALUES ({id_row}, {anio}, '{id_departamento}', '{id_municipio}', '{codigo_cie}');"
     inserts.append(insert)
 
 # Escribimos los inserts en el archivo de salida
