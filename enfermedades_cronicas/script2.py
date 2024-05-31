@@ -31,5 +31,8 @@ df['id_departamento'] = df['id_departamento'].apply(lambda x: limpiar_texto(str(
 df['id_municipio'] = df['id_municipio'].apply(lambda x: limpiar_texto(str(x))).map(dic_municipio)
 
 
+#eliminar las filas con valores nulos
+df_clean = df.dropna()
+
 # Guardar el DataFrame modificado en un nuevo archivo CSV
-df.to_csv(ruta_salida + 'data2.csv', index=False)
+df_clean.to_csv(ruta_salida + 'data2.csv', index=False)
