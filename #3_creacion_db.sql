@@ -191,3 +191,25 @@ CREATE TABLE IF NOT EXISTS atencion_por_vacuna_vph(
     FOREIGN KEY (id_numero_dosis) REFERENCES numero_dosis(id_numero_dosis),
     FOREIGN KEY (id_genero) REFERENCES genero(id_genero)
 );
+
+CREATE TABLE IF NOT EXISTS enfermedades_cronicas(
+    id_enfermedades_cronicas INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    anio INT NOT NULL,
+    id_departamento VARCHAR(2) NOT NULL,
+    id_municipio VARCHAR(4) NOT NULL,
+    codigo_cie VARCHAR(10) NOT NULL,
+    FOREIGN KEY (id_departamento) REFERENCES departamento(id_departamento),
+    FOREIGN KEY (id_municipio) REFERENCES municipio(id_municipio),
+    FOREIGN KEY (codigo_cie) REFERENCES enfermedades(codigo_cie)
+);
+
+CREATE TABLE IF NOT EXISTS valor_enfermedades_cronicas(
+    id PRIMARY KEY NOT NULL,
+    id_enfermedades_cronicas INT NOT NULL,
+    id_genero INT NOT NULL,
+    id_rango_edad INT NOT NULL,
+    valor INT NOT NULL,
+    FOREIGN KEY (id_enfermedades_cronicas) REFERENCES enfermedades_cronicas(id_enfermedades_cronicas),
+    FOREIGN KEY (id_genero) REFERENCES genero(id_genero),
+    FOREIGN KEY (id_rango_edad) REFERENCES rangos_edad(id_rango_edad)
+);
