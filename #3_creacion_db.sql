@@ -204,7 +204,7 @@ CREATE TABLE IF NOT EXISTS enfermedades_cronicas(
 );
 
 CREATE TABLE IF NOT EXISTS valor_enfermedades_cronicas(
-    id INT PRIMARY KEY NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     id_enfermedades_cronicas INT NOT NULL,
     id_genero INT NOT NULL,
     id_rango_edad INT NOT NULL,
