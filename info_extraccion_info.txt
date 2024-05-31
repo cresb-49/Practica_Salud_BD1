@@ -24,3 +24,7 @@ Orden de ejecucion:
 #3_creacion_db.sql
 #3_carga_datos1.sql
 #3_carga_datos2.sql
+
+
+Las versiones lite de #3_carga_datos2.sql traen menos registros ya que son algo grandes los resultados
+mientras lite[num] es mas grande, menos datos hay para cargar
